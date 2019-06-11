@@ -19,6 +19,10 @@ public class DemoM {
      * Class Metadata Address
      * Array Length
      *
+     *
+     *
+     *
+     * https://www.jianshu.com/p/36eedeb3f912
      * 偏向锁 --
      *      每次获取锁和释放锁会浪费资源
      *      很多情况下，竞争锁不是由多个线程，而是由一个线程在使用。
@@ -36,7 +40,7 @@ public class DemoM {
      *
      *
      *
-     * 匿名内部类！
+     * 匿名内部类！   ok
      * 泛型！FutureTask
      *
      * interupt

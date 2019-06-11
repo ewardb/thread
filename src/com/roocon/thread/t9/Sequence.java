@@ -4,7 +4,19 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Sequence {
-	
+
+
+	/**
+	 * Lock需要显示地获取和释放锁，繁琐能让代码更灵活
+	 * Synchronized不需要显示地获取和释放锁，简单
+	 *
+	 *使用Lock可以方便的实现公平性
+	 *
+	 * 非阻塞的获取锁   tryLock
+	 * 能被中断的获取锁
+	 * 超时获取锁	超时 就会返回了
+	 *
+	 */
 	private int value;
 	Lock lock = new ReentrantLock();
 	Lock l1 = new ReentrantLock();
@@ -38,7 +50,7 @@ public class Sequence {
 			}
 		}).start();
 		
-		new Thread(new Runnable() {
+		new Thread(new Runnable( ) {
 			
 			@Override
 			public void run() {

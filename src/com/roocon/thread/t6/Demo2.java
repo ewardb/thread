@@ -87,9 +87,12 @@ public class Demo2 {
 			}
 		}).start();
 		
-		while(Thread.activeCount() != 1) {
+		while(Thread.activeCount() != 2) {
+//			System.out.println(Thread.activeCount());/
+
 			// 自旋
 		}
+
 		System.out.println("所有的线程执行完毕了...");
 	}
 

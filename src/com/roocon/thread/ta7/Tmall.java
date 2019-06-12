@@ -9,7 +9,7 @@ public class Tmall {
 	public synchronized void push () {
 		while(count >= MAX_COUNT) {
 			try {
-				System.out.println(Thread.currentThread().getName() + " 库存数量达到上限，生产者停止生产。");
+//				System.out.println(Thread.currentThread().getName() + " 库存数量达到上限，生产者停止生产。");
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -24,7 +24,7 @@ public class Tmall {
 		
 		while(count <= 0) {
 			try {
-				System.out.println(Thread.currentThread().getName() + " 库存数量为零，消费者等待。");
+//				System.out.println(Thread.currentThread().getName() + " 库存数量为零，消费者等待。");
 				wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();

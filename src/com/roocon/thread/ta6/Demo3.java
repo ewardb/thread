@@ -10,6 +10,10 @@ private volatile int signal;
 		signal = 1;
 		notifyAll(); // notify方法会随机叫醒一个处于wait状态的线程
 		 // notifyAll叫醒所有的处于wait线程，争夺到时间片的线程只有一个
+
+		/**
+		 *  notifyall notify  执行后， 等锁释放后 别的线程才能获得！
+		 */
 		System.out.println("叫醒线程叫醒之后休眠开始...");
 		try {
 			Thread.sleep(3000);
@@ -23,7 +27,7 @@ private volatile int signal;
 		System.out.println(Thread.currentThread().getName() + " 方法执行了...");
 		if(signal != 1) {
 			try {
-				wait();
+				wait(); //wait 会释放锁
 				System.out.println("叫醒之后");
 			} catch (InterruptedException e) {
 				e.printStackTrace();

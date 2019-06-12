@@ -33,8 +33,12 @@ public class Demo2 {
 				}
 			}
 		}).start();
-		
-		
+
+
+		/**
+		 * wait()  notify 必须放在同步代码块中 才能使用
+		 *
+		 */
 		new Thread(new Runnable() {
 			
 			@Override

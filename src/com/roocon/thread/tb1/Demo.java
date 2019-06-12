@@ -1,6 +1,6 @@
 package com.roocon.thread.tb1;
 
-public class Demo {
+public class  Demo {
 	
 	public void target (Thread joinThread) {
 		

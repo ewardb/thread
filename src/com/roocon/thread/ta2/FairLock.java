@@ -3,6 +3,9 @@ package com.roocon.thread.ta2;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 公平的锁， 获取锁 是公平的
+ */
 public class FairLock {
 	private boolean isLocked = false;
 	private Thread lockingThread = null;

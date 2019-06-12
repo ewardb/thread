@@ -50,12 +50,12 @@ public class Main {
 			}
 		}).start();
 		
-//		new Thread(new Runnable() {
-//			@Override
-//			public void run() {
-//				d.put("key3", "value3");
-//			}
-//		}).start();
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				d.put("key3", "value3");
+			}
+		}).start();
 		
 		
 	}

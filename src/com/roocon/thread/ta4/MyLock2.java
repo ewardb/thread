@@ -27,7 +27,7 @@ public class MyLock2 implements Lock {
 					setExclusiveOwnerThread(t);
 					return true;
 				}
-			} else if (getExclusiveOwnerThread() == t) {
+			} else if (getExclusiveOwnerThread() == t) { //ø…¥”»Î
 				setState(state + 1);
 				return true;
 			}
